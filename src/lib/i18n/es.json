@@ -1,0 +1,12 @@
+{
+  "Land": {
+    "description-adjoining": "Colindancias",
+    "description-approved": "Aprobado",
+    "description-title": "Información del predio",
+    "description-folio": "Folio",
+    "description-no": "No",
+    "description-observations": "Observaciones",
+    "description-owner": "Dueño",
+    "description-yes": "Sí"
+  }
+}
