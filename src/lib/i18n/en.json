@@ -1,0 +1,12 @@
+{
+  "Land": {
+    "description-adjoining": "Adjoining",
+    "description-approved": "Approved",
+    "description-title": "Land info",
+    "description-folio": "Folio",
+    "description-no": "No",
+    "description-observations": "Observations",
+    "description-owner": "Owner",
+    "description-yes": "Yes"
+  }
+}
