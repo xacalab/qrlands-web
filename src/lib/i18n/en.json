@@ -1,12 +1,16 @@
 {
   "Land": {
-    "description-adjoining": "Adjoining",
-    "description-approved": "Approved",
-    "description-title": "Land info",
+    "description-title": "Cian Residencial",
     "description-folio": "Folio",
-    "description-no": "No",
+    "description-measures": "Measures",
+    "description-adjoining": "Adjoining",
+    "description-license-status": "Licence status",
+    "description-debts-status": "Debts",
+    "description-agrarian-core": "Agrarian Core",
     "description-observations": "Observations",
-    "description-owner": "Owner",
-    "description-yes": "Yes"
+    "description-location": "Location",
+    "description-approved": "Approved",
+    "description-yes": "Yes",
+    "description-no": "No"
   }
 }

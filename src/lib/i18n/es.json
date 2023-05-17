@@ -1,12 +1,16 @@
 {
   "Land": {
-    "description-adjoining": "Colindancias",
-    "description-approved": "Aprobado",
-    "description-title": "Información del predio",
+    "description-title": "Cian Residencial",
     "description-folio": "Folio",
-    "description-no": "No",
+    "description-measures": "Medidas",
+    "description-adjoining": "Colindancias",
+    "description-license-status": "Estatus de Licencia",
+    "description-debts-status": "Adeudos",
+    "description-agrarian-core": "Núcleo Agrario",
     "description-observations": "Observaciones",
-    "description-owner": "Dueño",
-    "description-yes": "Sí"
+    "description-location": "Ubicación",
+    "description-approved": "Aprobado",
+    "description-yes": "Sí",
+    "description-no": "No"
   }
 }
