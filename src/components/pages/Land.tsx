@@ -15,11 +15,14 @@ interface Props {
 interface LandAPIData {
   id: string;
   folio: string;
-  owner: string;
-  isApproved: boolean;
+  measures: string;
+  adjoining: string[];
+  licenseStatus: boolean;
+  debtStatus: boolean;
+  agrarianCore: string;
   observations: string[];
-  adjoining: Array<{}>;
   locationURL: string;
+  isApproved: boolean;
 }
 
 function buildURL(id: string) {
@@ -60,22 +63,33 @@ export default function LandPage({ id }: Props) {
             <Descriptions.Item label={t('description-folio')}>
               {landData.folio}
             </Descriptions.Item>
-            <Descriptions.Item label={t('description-owner')}>
-              {landData.owner}
+            <Descriptions.Item label={t('description-measures')}>
+              {landData.measures}
             </Descriptions.Item>
-            <Descriptions.Item label={t('description-approved')}>
-              {landData.isApproved ? t('description-yes') : t('description-no')}
+            <Descriptions.Item label={t('description-adjoining')}>
+              {landData.adjoining}
+            </Descriptions.Item>
+            <Descriptions.Item label={t('description-license-status')}>
+              {landData.licenseStatus
+                ? t('description-yes')
+                : t('description-no')}
+            </Descriptions.Item>
+            <Descriptions.Item label={t('description-debts-status')}>
+              {landData.debtStatus ? t('description-yes') : t('description-no')}
+            </Descriptions.Item>
+            <Descriptions.Item label={t('description-agrarian-core')}>
+              {landData.agrarianCore}
             </Descriptions.Item>
             <Descriptions.Item label={t('description-observations')}>
               {landData.observations.map((observation) => observation)}
-            </Descriptions.Item>
-            <Descriptions.Item label={t('description-adjoining')}>
-              {landData.adjoining.length}
             </Descriptions.Item>
             <Descriptions.Item label={t('description-location')}>
               <a href={landData.locationURL} target="_blank">
                 <Button icon={<PushpinOutlined />}></Button>
               </a>
+            </Descriptions.Item>
+            <Descriptions.Item label={t('description-approved')}>
+              {landData.isApproved ? t('description-yes') : t('description-no')}
             </Descriptions.Item>
           </Descriptions>
         )}
@@ -83,7 +97,7 @@ export default function LandPage({ id }: Props) {
       <div className="">
         {qrValue && (
           <QRCode
-            icon="https://static.thenounproject.com/png/3097481-200.png"
+            /*icon="https://static.thenounproject.com/png/3097481-200.png"*/
             value={qrValue}
           />
         )}
