@@ -36,7 +36,6 @@ export default function LandPage({ id }: Props) {
   const router = useRouter();
   const [qrValue, setQrValue] = React.useState<string>();
   const [landData, setLandData] = React.useState<LandAPIData>();
-  const [errorMessage, setErrorMessage] = React.useState<string>();
 
   React.useEffect(() => {
     apiFetch<LandAPIData>(`/lands/${id}`, {
@@ -49,11 +48,9 @@ export default function LandPage({ id }: Props) {
       .catch((err: APIFetchError) => {
         if (err.status === 404) {
           router.push('/404');
-        } else {
-          setErrorMessage(err.message);
         }
       });
-  }, [id]);
+  }, [id, router, setLandData, setQrValue]);
 
   return (
     <main className="flex flex-row p-2 gap-2">
@@ -94,14 +91,7 @@ export default function LandPage({ id }: Props) {
           </Descriptions>
         )}
       </div>
-      <div className="">
-        {qrValue && (
-          <QRCode
-            /*icon="https://static.thenounproject.com/png/3097481-200.png"*/
-            value={qrValue}
-          />
-        )}
-      </div>
+      <div className="">{qrValue && <QRCode value={qrValue} />}</div>
     </main>
   );
 }

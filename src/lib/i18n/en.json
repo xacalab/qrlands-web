@@ -1,6 +1,5 @@
 {
   "Land": {
-    
     "description-title": "Cian Residencial",
     "description-folio": "Folio",
     "description-measures": "Measures",
@@ -12,6 +11,6 @@
     "description-location": "Location",
     "description-approved": "Approved",
     "description-yes": "Yes",
-    "description-no": "No"    
+    "description-no": "No"
   }
 }
