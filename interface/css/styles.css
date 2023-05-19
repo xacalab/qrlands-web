@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Austerera';
+    src: url(../fonts/AusteraText-Bold.ttf);
+    font-style: Bold;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url(../fonts/Futura\ Medium.otf);
+    font-style: medium;
+}
+
+/***************** General variables & properties ******************/
+
+:root{
+    --body-background: #f7f4e6;
+    --label: #763939;
+    --futura-text: #606645;
+    --input-text: #393937;
+}
+
+*{
+    background: var(--body-background);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************* HEADER PROPERTIES *************/
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    text-align: center;
+}
+
+header img{
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+header p{
+    width: 90%;
+    min-width: 270px;
+    max-width: 900px;
+    margin-top: 12px;
+    text-align: justify;
+    align-self: center;
+    font-family: 'futura';
+    color: var(--futura-text);
+    font-size: 8px;
+}
+/************** MAIN Propierties ***************/
+main{
+    width: 100%;
+    height: auto;
+}
+
+/********************* LAND INFO SECTION ***********************/
+
+.main-land-info{
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.land-info-chart{
+    width: 90%;
+    min-width: 270px;
+    max-width: 900px;
+    margin: auto auto;
+    height: 450px;
+    color: var(--body-background);
+    border: 2px solid var(--label);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    background-image: url(../images/escudo-mobile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/********************LABEL & INPUTS PROPIERTIES *******************/
+
+.concept{
+    border: none;
+    border-bottom: 1px solid var(--body-background);
+    background-color: var(--label);
+}
+
+.land-info-chart input{
+    border: none;
+    border-bottom: 1px solid var(--label);
+}
