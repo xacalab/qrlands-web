@@ -1,7 +1,8 @@
 {
   "Land": {
     "description-title": "Cian Residencial",
-    "description-folio": "Folio",
+    "description-owner": "Propietario",
+    "description-residencial": "Fraccionamiento",
     "description-measures": "Medidas",
     "description-adjoining": "Colindancias",
     "description-license-status": "Estatus de Licencia",

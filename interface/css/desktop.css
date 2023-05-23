@@ -1,0 +1,30 @@
+header .img-mobile{
+    display: none;
+}
+
+header p{
+    margin: 20px 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+header .img-desktop{
+    display: block;
+    width: 100%;
+}
+
+.land-info-chart{
+        width: 90%;
+        max-width: 100%;
+        margin: auto auto;
+        grid-template-columns: 250px 600px 250px 600px;
+}
+
+.concept{
+    font-size: 1.5rem;  
+    height: auto;
+ }
+
+ .land-info-chart input{
+    font-size: 16px;
+}

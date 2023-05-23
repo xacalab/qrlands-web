@@ -19,10 +19,18 @@
 }
 
 *{
-    background: var(--body-background);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background: var(--body-background);
+    background-image: url(../images/escudo-mobile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 /******************* HEADER PROPERTIES *************/
@@ -36,24 +44,28 @@ header{
     min-width: 320px;
     height: auto;
     text-align: center;
+    
 }
 
-header img{
+header .img-mobile{
     width: 100%;
     height: auto;
     align-self: center;
 }
 
+header .img-desktop{
+    display: none;
+}
+
 header p{
     width: 90%;
     min-width: 270px;
-    max-width: 900px;
     margin-top: 12px;
     text-align: justify;
     align-self: center;
     font-family: 'futura';
     color: var(--futura-text);
-    font-size: 8px;
+    font-size: 10px;
 }
 /************** MAIN Propierties ***************/
 main{
@@ -69,36 +81,51 @@ main{
     height: auto;
     text-align: center;
     margin-top: 12px;
+
 }
 
 .land-info-chart{
+
+    font-family: 'austerera';
+    text-transform: uppercase;
     width: 90%;
     min-width: 270px;
-    max-width: 900px;
     margin: auto auto;
     height: 450px;
     color: var(--body-background);
     border: 2px solid var(--label);
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 120px auto;
     overflow: hidden;
-    background-image: url(../images/escudo-mobile.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
+    background: none;
 }
 
 /********************LABEL & INPUTS PROPIERTIES *******************/
 
 .concept{
+    width: auto;
+    height: auto;
+    display: grid;
+    align-content: center;
     border: none;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 300;
     border-bottom: 1px solid var(--body-background);
     background-color: var(--label);
+    
+   
 }
 
 .land-info-chart input{
+    text-transform: uppercase;
+    width: 100%;
+    height: auto;
+    font-family: 'austerera';
+    color: var(--input-text);
     border: none;
-    border-bottom: 1px solid var(--label);
+    border-bottom: 1px solid var(--input-text);
+    font-size: 12px;
+    background-color: transparent;
 }

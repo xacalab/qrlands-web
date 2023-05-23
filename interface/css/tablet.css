@@ -7,6 +7,14 @@ header p{
     font-size: 1rem;
 }
 
+.concept{
+    font-size: 1.2rem;
+}
+
 .land-info-chart{
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 240px auto;
+}
+
+.land-info-chart input{
+    font-size: 16px;    
 }

@@ -15,6 +15,7 @@ interface Props {
 interface LandAPIData {
   id: string;
   folio: string;
+  residencial: string;
   measures: string;
   adjoining: string[];
   licenseStatus: boolean;
@@ -53,14 +54,36 @@ export default function LandPage({ id }: Props) {
   }, [id, router, setLandData, setQrValue]);
 
   return (
-    <main className="flex flex-row p-2 gap-2">
-      <div className="flex-1">
+    <main className="bg-yellow-50">
+      <header className="relative flex flex-col items-center justify-center w-full ">
+        <img
+          className="w-full  min-[768px]:hidden"
+          src="/assets/cabeza-mobile.png"
+          alt=""
+        />
+        <img
+          className="hidden min-[768]:show"
+          src="/assets/cabeza-escritorio.png"
+          alt=""
+        />
+        <p className="font-serif text-xs text-justify">
+          Los que suscribimos: Presidente, Secretario, Tesorero respecticamente
+          del Comisariado de Bienes Comunales y el Consejo de Vigilancia de San
+          Francisco Cozoaltepec, Distrito de Pochutla, Estado de Oaxaca, con
+          fundamento en los artículos 33 fracción II, 57, 60, 64, 69 y 80 de la
+          nueva legislación agraria vigente.
+        </p>
+      </header>
+      <section className="flex-1">
         {landData && (
           <Descriptions title={t('description-title')} bordered>
-            <Descriptions.Item label={t('description-folio')}>
+            <Descriptions.Item label={t('description-owner')}>
               {landData.folio}
             </Descriptions.Item>
-            <Descriptions.Item label={t('description-measures')}>
+            <Descriptions.Item label={t('description-residencial')}>
+              {landData.residencial}
+            </Descriptions.Item>
+            <Descriptions.Item label={t('description-measures')} span={3}>
               {landData.measures}
             </Descriptions.Item>
             <Descriptions.Item label={t('description-adjoining')}>
@@ -90,7 +113,7 @@ export default function LandPage({ id }: Props) {
             </Descriptions.Item>
           </Descriptions>
         )}
-      </div>
+      </section>
       <div className="">{qrValue && <QRCode value={qrValue} />}</div>
     </main>
   );
